@@ -1,6 +1,5 @@
 # Question 1
 # a)
-"""
 increaseNum = 3
 while increaseNum <= 23:
     print(increaseNum)
@@ -63,15 +62,97 @@ print("Total of even numbers is " + str(sumOfEvenNum))
 
 # Question 8
 sumOfOdd = 0
-for odd in range(1, 100,2):
+for odd in range(1, 100, 2):
     sumOfOdd += odd
 print("Sum of odd numbers from 1 to 100 is " + str(sumOfOdd))
 
 # Question 9
 # a
-for n in range(1, 6):
-    print("A|A|A|A|A|")
-"""
+column = 5
+for row in range(1, column + 1):
+    print("A|" * column)
+
 # b
-for n in range(1, 6):
-    print("+=")
+for row in range(1, 6):
+    print("+=" * row)
+
+# c
+for row in range(5, 0, -1):
+    print("B|" * row)
+
+# d
+for i in range(5, 0, -1):
+    print(":>" * i, end="")
+    print("  ", end="")
+    print(":P" * (5 + 1 - i))
+
+# e
+for n in range(1, 9):
+    if n % 3 != 0:
+        print("{0})".format(n) * 5)
+    else:
+        print()
+
+# Question 10
+harmonicSum = 0
+for i in range(1, 50001):
+    harmonicSum += 1 / i
+print(harmonicSum)
+
+# Question 11
+n = 20
+fibo1 = 1
+fibo2 = 1
+fiboSum = fibo1 + fibo2
+print("The first 20 Fibonacci numbers are: {0} {1}".format(fibo1, fibo2), end=" ")
+for i in range(3, n + 1):
+    fibo = fibo1 + fibo2
+    fiboSum += fibo
+    print(fibo, end=" ")
+    fibo2 = fibo1
+    fibo1 = fibo
+print()
+fibo_average = fiboSum / n
+print("The average is {0}".format(fibo_average))
+
+#  Question 12
+while True:
+    num = int(input("Enter a positive number: "))
+    if num < 0:
+        print("Please enter a positive number!")
+    else:
+        break
+# Prime number is only divisible by 1 and itself
+
+is_prime = True
+for i in range(2, num):
+    if num % i == 0:
+        is_prime = False
+        break
+
+if is_prime == True:
+    print("{0} is a prime number".format(num))
+else:
+    print("{0} is not a prime number".format(num))
+
+# Question 13
+
+# PSLE Question
+level = 250
+triPerLevel = 1
+totalTri = greyTri = whiteTri = 0
+
+for tri in range(1, level + 1):
+    if tri % 2 == 1:
+        whiteTri += triPerLevel
+    else:
+        greyTri += triPerLevel
+
+    triPerLevel += 2
+
+totalTri = whiteTri + greyTri
+print("total white: {0}".format(whiteTri))
+print("total grey: {0}".format(greyTri))
+print("Total triangles: {0}".format(totalTri))
+grey_percent = round((greyTri / totalTri) * 100, 2)
+print("Percentage of grey: {0}".format(grey_percent))
