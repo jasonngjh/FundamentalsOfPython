@@ -136,6 +136,41 @@ else:
     print("{0} is not a prime number".format(num))
 
 # Question 13
+userInput = int(input("User input length: "))
+# a
+print("Output pattern:")
+for i in range(1, userInput + 1):
+    if (i == 1) or (i == userInput):
+        print("*" * 4)
+    else:
+        print("*  *")
+# b
+print("Output pattern:")
+for i in range(1, userInput + 1):
+    print(" " * (userInput + 1 - i), end="")
+    print("*" * i)
+# c
+print("Output pattern:")
+for i in range(userInput, 0, -1):
+    print("*" * i)
+# d
+print("Output pattern:")
+for row in range(0, userInput):
+    for space in range((userInput - row) - 1):
+        print(end=" ")
+    for star in range(row + 1):
+        print("*", end=" ")
+    print()
+# e
+print("Output pattern:")
+for row in range(userInput, 0, -1):
+    for space in range((userInput - row) - 1):
+        print(end=" ")
+    for star in range(row, 0, -1):
+        print("*", end=" ")
+    print()
+# f
+# g
 
 # PSLE Question
 level = 250
