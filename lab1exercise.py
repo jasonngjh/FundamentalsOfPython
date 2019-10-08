@@ -41,8 +41,8 @@ secondNum = int(input("Enter the second number: "))
 
 a2 = firstNum ** 2
 b2 = secondNum ** 2
-c2 = (a2 + b2) ** (1 / 2)
-print("The value of third number c is {0}".format(c2))
+c = (a2 + b2) ** (1 / 2)
+print("The value of third number c is {0}".format(c))
 
 # Question 7
 gender = input("Enter gender (m/f):")

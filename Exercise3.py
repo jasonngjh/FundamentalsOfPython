@@ -137,42 +137,54 @@ else:
 
 # Question 13
 userInput = int(input("User input length: "))
+
 # a
 print("Output pattern:")
 for i in range(1, userInput + 1):
     if (i == 1) or (i == userInput):
-        print("*" * 4)
+        print("*" * userInput)
     else:
-        print("*  *")
+        print("{0}{1}{2}".format("*", " " * (userInput - 2), "*"))
+
 # b
 print("Output pattern:")
 for i in range(1, userInput + 1):
-    print(" " * (userInput + 1 - i), end="")
+    print(" " * (userInput - i), end="")
     print("*" * i)
+
 # c
 print("Output pattern:")
 for i in range(userInput, 0, -1):
     print("*" * i)
+
 # d
 print("Output pattern:")
-for row in range(0, userInput):
-    for space in range((userInput - row) - 1):
-        print(end=" ")
-    for star in range(row + 1):
-        print("*", end=" ")
-    print()
+for i in range(1, userInput + 1):
+    print(" " * (userInput - i), end="")
+    print("*" * (i * 2 - 1))
+
 # e
 print("Output pattern:")
-for row in range(userInput, 0, -1):
-    for space in range((userInput - row) - 1):
-        print(end=" ")
-    for star in range(row, 0, -1):
-        print("*", end=" ")
-    print()
+for i in range(userInput, 0, -1):
+    print(" " * (userInput - i), end="")
+    print("*" * (i * 2 - 1))
+
 # f
-
+print("Output pattern:")
+for i in range(1, userInput + 1):
+    print(" " * (userInput - i), end="")
+    if i == 1:
+        print("*")
+    else:
+        print("{0}{1}{2}".format("*", " " * (i * 2 - 3), "*"))
 # g
-
+print("Output pattern:")
+for i in range(1, userInput + 1):
+    print(" " * (userInput - i), end="")
+    print("*" * (i * 2 - 1))
+for i in range(userInput - 1, 0, -1):
+    print(" " * (userInput - i), end="")
+    print("*" * (i * 2 - 1))
 
 # PSLE Question
 level = 250
