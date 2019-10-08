@@ -170,7 +170,9 @@ for row in range(userInput, 0, -1):
         print("*", end=" ")
     print()
 # f
+
 # g
+
 
 # PSLE Question
 level = 250
