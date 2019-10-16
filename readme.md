@@ -1,1 +1,1 @@
-<h1>Code for CSIT110 Exercises</h1>
+<h1>Code for Fundamental of Python Exercises</h1>
