@@ -65,7 +65,7 @@ def isPrime(n, m):
 
 print(isPrime(50, 2))
 
-Question 7
+# Question 7
 def largest(num_list):
     if len(num_list) == 1:
         return num_list[0]
